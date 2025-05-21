@@ -1,54 +1,67 @@
-# React + TypeScript + Vite
+# GitHub Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um blog desenvolvido em ReactJS que utiliza as issues de um repositório do GitHub como posts. Ele foi criado durante os estudos na Rocketseat, com o objetivo de praticar conceitos de React, consumo de APIs, roteamento dinâmico e estilização moderna.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Listagem de posts a partir das issues do repositório do GitHub
+- Busca de posts por texto
+- Visualização detalhada de cada post (issue)
+- Renderização de conteúdo em Markdown com destaque de sintaxe
+- Perfil do usuário do GitHub exibido no topo
+- Layout responsivo e estilização com TailwindCSS
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [ReactJS](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM](https://reactrouter.com/)
+- [Axios](https://axios-http.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React Markdown](https://github.com/remarkjs/react-markdown)
+- [date-fns](https://date-fns.org/)
+- [Phosphor Icons](https://phosphoricons.com/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Como rodar o projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/eduardossimas/github-blog.git
+   cd github-blog
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Acesse no navegador:**
+   ```
+   http://localhost:5173
+   ```
+
+## Configuração
+
+O projeto utiliza a API pública do GitHub, não sendo necessário token para leitura de issues públicas. Caso queira acessar repositórios privados ou evitar limites de requisições, configure um token no arquivo de configuração do Axios.
+
+## Estrutura de Pastas
+
+- `src/components`: Componentes reutilizáveis (cards, perfil, etc)
+- `src/pages`: Páginas principais (Home, Post)
+- `src/context`: Contextos de dados (posts)
+- `src/utils`: Funções utilitárias
+- `src/lib`: Configuração do Axios
+
+## Licença
+
+Este projeto é apenas para fins de estudo e portfólio.
+
+---
+
+Feito com 💜 por Eduardo Salzer
