@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+@theme {
+  /* 🎨 Cores */
+  --color-blue: #3294F8;
+
+  --color-base-title: #E7EDF4;
+  --color-base-subtitle: #C4D4E3;
+  --color-base-text: #AFC2D4;
+  --color-base-span: #7B96B2;
+  --color-base-label: #3A536B;
+  --color-base-border: #1C2F41;
+  --color-base-post: #112131;
+  --color-base-profile: #0B1B2B;
+  --color-base-background: #071422;
+  --color-base-input: #040F1A;
+
+  /* 🖋️ Tipografia */
+  --font-primary: "Nunito", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Tamanhos de fonte */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+
+  /* Altura da linha */
+  --line-height-relaxed: 160%;
+
+}
